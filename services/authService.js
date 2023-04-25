@@ -23,6 +23,7 @@ exports.register = async (userName, email, password, repeatedPassword) => {
     }
 
     const hashedPassword = await bcrypt.hash(password, 10);
+    
     try{
         await User.create({ userName, email, password: hashedPassword })
     }catch (error){
@@ -37,14 +38,14 @@ exports.login = async (email, password) => {
     const user = await this.findByEmail(email);
 
     if (!user) {
-        throw new Error('invalid email or password');
+        throw new Error('Invalid email or password');
         
     }
 
     const isValid = await bcrypt.compare(password,user.password);
 
     if (!isValid) {
-        throw new Error('invalid email or password');
+        throw new Error('Invalid email or password');
     }
     //Generate token
     const payload = {

@@ -3,14 +3,14 @@ const routes = require('./routes');
 const cors = require('cors');
 
 const mongoose = require ('mongoose');
-
+const { authentication } = require ('../server/middlewares/authMiddleware');
 
 const app = express();
 
 app.use(cors());
 app.use(express.urlencoded({extended : false}));
 app.use(express.json());
-
+app.use(authentication());
 app.use(routes);
 
 mongoose.set('strictQuery', false);
