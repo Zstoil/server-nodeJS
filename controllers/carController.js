@@ -1,6 +1,6 @@
 const router = require('express').Router();
 
-const carService = require('../services/CarService');
+const carService = require('../services/carService');
 
 router.get('/',async (req,res) => {
 
@@ -12,7 +12,7 @@ router.get('/',async (req,res) => {
 router.get ('/:carId', async (req,res) => {
 
     const car = await carService.getOne(req.params.carId);
-
+   
     res.json(car)
 })
 

@@ -2,7 +2,7 @@ const Car = require ("../models/Car");
 
 exports.getAll = () => Car.find({}); 
 
-exports.getOne = (id) => Car.findById(id);
+exports.getOne = (id) => Car.findById(id).populate('like');
 
 exports.create = (ownerId, data) => Car.create({...data, _ownerId: ownerId});
 

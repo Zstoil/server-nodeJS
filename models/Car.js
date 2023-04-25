@@ -35,7 +35,11 @@ const carSchema = new mongoose.Schema({
     _ownerId: {
         type: mongoose.Types.ObjectId,
         ref: 'User'
-    }
+    },
+    like:[{
+        type: mongoose.Types.ObjectId,
+        ref: 'Like'
+    }],
 });
 
 const Car = mongoose.model("Car",carSchema);
