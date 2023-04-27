@@ -40,6 +40,10 @@ const carSchema = new mongoose.Schema({
         type: mongoose.Types.ObjectId,
         ref: 'Like'
     }],
+    unLike:[{
+        type: mongoose.Types.ObjectId,
+        ref: 'UnLike'
+    }],
 });
 
 const Car = mongoose.model("Car",carSchema);
