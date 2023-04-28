@@ -28,7 +28,7 @@ router.delete('/:likeId', async (req,res) => {
 
     const carId = req.body.carId;
 
-    const car = await carService.getOneCarAllLikeUnLike(carId);
+    const car = await carService.getOneCar(carId);
     
     const like = await carLikeService.delete(req.params.likeId);
 

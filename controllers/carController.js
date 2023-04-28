@@ -30,13 +30,13 @@ router.put('/:carId', async (req,res) => {
     const updateCar = await carService.edit(req.params.carId, carData);
 
     res.json(updateCar);
-})
+});
 
 router.delete('/:carId', async (req,res) => {
 
     const car = await carService.delete(req.params.carId);
 
     res.json({ok: true});
-})
+});
 
 module.exports = router;

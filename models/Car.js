@@ -44,6 +44,10 @@ const carSchema = new mongoose.Schema({
         type: mongoose.Types.ObjectId,
         ref: 'UnLike'
     }],
+    comments:[{
+        type: mongoose.Types.ObjectId,
+        ref: 'Comments'
+    }]
 });
 
 const Car = mongoose.model("Car",carSchema);
