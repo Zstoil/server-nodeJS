@@ -1,4 +1,4 @@
-const Car = require ("../models/Car");
+const Car = require ("../src/models/Car");
 
 exports.getAll = () => Car.find({}); 
 

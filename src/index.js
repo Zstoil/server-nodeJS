@@ -1,8 +1,8 @@
 const express = require('express');
-const routes = require('./routes');
+const routes = require('../routes');
 const cors = require('cors');
+const initDatabase = require('./config/databaseInit');
 
-const mongoose = require ('mongoose');
 const { authentication } = require ('../server/middlewares/authMiddleware');
 
 const app = express();
@@ -13,10 +13,9 @@ app.use(express.json());
 app.use(authentication());
 app.use(routes);
 
-mongoose.set('strictQuery', false);
-mongoose.connect('mongodb://127.0.0.1:27017/data');
-
-app.listen(3030, () => console.log('Server is running on port 3030...'));
+initDatabase()
+    .then(() => app.listen(config.PORT, () => console.log(`Server is running on port ${config.PORT}...`)))
+    .catch((err) => console.error(err.message));
 
 
 
