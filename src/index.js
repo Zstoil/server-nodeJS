@@ -1,9 +1,10 @@
 const express = require('express');
-const routes = require('../routes');
+const routes = require('./routes');
 const cors = require('cors');
 const initDatabase = require('./config/databaseInit');
+const config = require('./config');
 
-const { authentication } = require ('../server/middlewares/authMiddleware');
+const { authentication } = require ('../src/middlewares/authMiddleware');
 
 const app = express();
 

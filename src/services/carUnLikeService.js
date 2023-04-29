@@ -1,4 +1,4 @@
-const Unlike = require('../src/models/UnLike');
+const Unlike = require('../models/UnLike');
 
 exports.getAll = () => Unlike.find({});
 
