@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express');
 const routes = require('./routes');
 const cors = require('cors');
@@ -16,10 +17,11 @@ app.use(express.json());
 app.use(authentication());
 app.use(routes);
 
+app.listen(process.env.DB_PORT);
 
-initDatabase()
-    .then(() => app.listen(config.PORT, () => console.log(`Server is running on port ${config.PORT}...`)))
-    .catch((err) => console.error(err.message));
+// initDatabase()
+//     .then(() => app.listen(config.PORT, () => console.log(`Server is running on port ${config.PORT}...`)))
+//     .catch((err) => console.error(err.message));
 
 
 
