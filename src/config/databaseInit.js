@@ -7,7 +7,7 @@ async function initDatabase() {
 
     await mongoose.connect(config.DB_URI);
 
-    console.log('DB connected');
+    console.log(`DB connected on ${config.DB_URI}`);
 }
 
 module.exports = initDatabase;
