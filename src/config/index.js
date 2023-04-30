@@ -1,6 +1,6 @@
 const config = {
     production: {
-        PORT: 'https://server-node-hyb7ulfxv-zstoil.vercel.app',
+        PORT: 8000,
         DB_URI: 'mongodb+srv://stoilzlatin89:mG5jKz7gWp5sg8qP@data.xloathm.mongodb.net/?retryWrites=true&w=majority',
         SECRET: 'SOMEPRODSECRET',
     },
