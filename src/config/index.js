@@ -5,7 +5,7 @@ const config = {
         SECRET: 'SOMEPRODSECRET',
     },
     development: {
-        PORT: 5000,
+        PORT: 3030,
         DB_URI: 'mongodb://127.0.0.1:27017/data',
         SECRET: 'SOMEDEVSECRET',
     }
