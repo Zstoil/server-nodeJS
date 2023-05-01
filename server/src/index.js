@@ -8,7 +8,6 @@ const mongoose = require('mongoose');
 
 const { authentication } = require ('../src/middlewares/authMiddleware');
 
-
 const app = express();
 
 app.use(cors());
