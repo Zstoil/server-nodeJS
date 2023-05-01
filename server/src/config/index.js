@@ -1,12 +1,12 @@
 const config = {
     production: {
         PORT: 3030,
-        DB_URI: 'mongodb+srv://stoilzlatin89:mG5jKz7gWp5sg8qP@data.xloathm.mongodb.net/?retryWrites=true&w=majority',
+        DB_URI: 'mongodb+srv://z-vercel:sM6qSxKf32w8q8dw@z-vercel.bs0nqlv.mongodb.net/test',
         SECRET: 'SOMEPRODSECRET',
     },
     development: {
         PORT: 3030,
-        DB_URI: 'mongodb://127.0.0.1:27017/data',
+        DB_URI: 'mongodb+srv://z-vercel:sM6qSxKf32w8q8dw@z-vercel.bs0nqlv.mongodb.net/test',
         SECRET: 'SOMEDEVSECRET',
     }
 };
