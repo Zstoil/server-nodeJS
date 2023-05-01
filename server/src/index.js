@@ -19,11 +19,11 @@ app.use(routes);
 
 mongoose.set('strictQuery', false);
 
-mongoose.connect(process.env.DB_URI);
+mongoose.connect(process.env.DB_URI,console.log(`mongoose is running on port ${process.env.DB_URI}...`));
 
-const port = process.env.DB_PORT || 3030
+const port = process.env.DB_PORT || 5000
 
-app.listen(port)
+app.listen(port,console.log(`Server is running on port ${port}...`))
 // app.listen(process.env.DB_PORT);
 
 // initDatabase()
