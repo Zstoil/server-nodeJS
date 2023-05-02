@@ -11,3 +11,5 @@ exports.edit = (id, data) => Car.findByIdAndUpdate(id, data);
 exports.delete = (id) => Car.findByIdAndDelete(id);
 
 exports.getOneCar = (id) => Car.findById(id);
+
+//test
